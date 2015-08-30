@@ -182,7 +182,14 @@ var StyleGuideItem = React.createClass({
   },
 
   render: function () {
-    var markup = this.props.staticMarkup || reactToJsx(this.props.children);
+    var children = [];
+
+    // #TODO: Figure out how to add keys to children
+    React.Children.map(this.props.children, function(child) {
+      children.push(child);
+    });
+
+    var markup = this.props.staticMarkup || reactToJsx(children);
 
     return (
       React.createElement("div", {className: this.props.componentClass},
@@ -190,7 +197,7 @@ var StyleGuideItem = React.createClass({
         this.renderDescription(),
 
         React.createElement("div", {className: this.props.exampleClass},
-          this.props.children
+          children
         ),
 
         this.renderMarkup(markup),
