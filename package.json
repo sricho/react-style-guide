@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "highlight.js": "^8.4.0",
+    "react": "^0.14.3",
     "react-to-jsx": "^1.2.0",
     "slugify": "^0.1.0"
   },
@@ -17,9 +18,6 @@
     "jsx-loader": "^0.12.2",
     "webpack": "^1.5.3",
     "webpack-dev-server": "^1.7.0"
-  },
-  "peerDependencies": {
-    "react": ">=0.12.0 <0.14.0"
   },
   "description": "A component to display React components with their JSX source in style guides",
   "directories": {
